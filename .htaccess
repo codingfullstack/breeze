@@ -1,0 +1,9 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^projektas.link$ [NC,OR]
+
+RewriteCond %{HTTP_HOST} ^www.projektas.link$
+
+RewriteCond %{REQUEST_URI} !public/
+
+RewriteRule (.*) /public/$1 [L]
