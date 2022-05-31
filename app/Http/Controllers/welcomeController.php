@@ -9,7 +9,7 @@ class welcomeController extends Controller
 {
     public function index()
     {
-        $posts = Post::with(['categories', 'likes'])->get();
-        return view('welcome', compact('posts'));
+
+        return view('welcome');
     }
 }
